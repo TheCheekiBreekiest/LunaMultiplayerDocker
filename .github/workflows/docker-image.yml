@@ -22,8 +22,6 @@ jobs:
         include:
           - image: server
             dockerfile: Dockerfile_Server
-          - image: masterserver
-            dockerfile: Dockerfile_MasterServer
     steps:
       - name: Checkout
         uses: actions/checkout@v4
