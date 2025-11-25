@@ -55,7 +55,7 @@ RUN export TARGET=$(echo ${TARGETARCH}${TARGETVARIANT} | sed -e 's/amd64/x64/' -
 FROM ${OS_BASE}:${OS_VERSION}
 RUN apk add icu-libs libstdc++ libgcc
 COPY --from=builder /LunaMultiplayer/Server/Publish/ /LMPServer/
-EXPOSE 8800/udp 8900/tcp
+EXPOSE 6702/udp 6702/tcp
 VOLUME "/LMPServer/Config" "/LMPServer/Plugins" "/LMPServer/Universe" "/LMPServer/logs"
 STOPSIGNAL SIGINT
 WORKDIR /LMPServer
